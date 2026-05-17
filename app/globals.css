@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg:      #eef3fc;
+  --bg2:     #e4ecf8;
+  --surface: rgba(255,255,255,0.94);
+  --surface2:rgba(224,235,250,0.7);
+  --border:  rgba(37,99,235,0.18);
+  --text:    #0d1e35;
+  --text2:   #2c4a6b;
+  --muted:   #64748b;
+  --muted2:  #475569;
+  --accent:  #3b82f6;
+  --accent2: #2563eb;
+  --green:   #22c55e;
+  --red:     #f43f5e;
+  --red-bg:  rgba(244,63,94,0.1);
+}
+
+.dark {
+  --bg:      #07101f;
+  --bg2:     #0c1828;
+  --surface: rgba(15,26,46,0.95);
+  --surface2:rgba(28,44,68,0.6);
+  --border:  rgba(49,110,215,0.22);
+  --text:    #dde8f4;
+  --text2:   #8ba4c0;
+  --muted:   #64748b;
+  --muted2:  #94a3b8;
+  --accent:  #3b82f6;
+  --accent2: #2563eb;
+  --green:   #22c55e;
+  --red:     #f43f5e;
+  --red-bg:  rgba(244,63,94,0.1);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Inputs com focus azul */
+input:focus {
+  outline: none;
+  border-color: var(--accent) !important;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(.8); }
+}
